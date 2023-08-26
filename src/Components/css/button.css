@@ -1,0 +1,10 @@
+.link-btn{
+    /* border: 2px solid var(--color); */
+    padding: 10px 25px;
+    border-radius: var(--borderRadius);
+    font-weight: 500;
+    /* -webkit-box-shadow: 7px 7px 0px 0px var(--color); 
+    box-shadow: 7px 7px 0px 0px var(--color); */
+    /* background: var(--background); */
+  }
+  

@@ -1,0 +1,22 @@
+.collage-two{
+    background-image: linear-gradient(90deg, #96c3d3 50%, #f3e1f7 50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+  }
+  
+  .collage-two > img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    scale: 1.3
+  }
+  
+  .collage-two > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }

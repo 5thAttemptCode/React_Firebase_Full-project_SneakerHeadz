@@ -1,0 +1,14 @@
+.marquee{
+    height: 25vh;
+    background: rgb(191, 255, 16);
+    overflow-y: hidden;
+    border-top: 2px solid var(--color);
+    border-bottom: 2px solid var(--color);
+  }
+  
+  .marquee h4{
+    font-family: var(--retroFont);
+    font-size: 22vh;
+    font-weight: 400;
+  }
+  

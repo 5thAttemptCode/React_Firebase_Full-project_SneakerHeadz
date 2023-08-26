@@ -1,0 +1,13 @@
+.slider_container{
+    overflow: hidden;
+    background: var(--caramel);
+    background-image: repeating-conic-gradient(var(--colorTwo) 0, var(--colorTwo) 20deg, transparent 10deg, transparent 40deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .slider_container > img{
+    transform: scale(1.5);
+    filter: grayscale(80%)
+  }
