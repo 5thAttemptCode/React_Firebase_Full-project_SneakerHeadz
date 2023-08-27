@@ -1,0 +1,11 @@
+.men > .product-container{
+    background: var(--brown);
+    background-image:   linear-gradient(30deg, var(--blue) 12%, transparent 12.5%, transparent 87%, var(--blue) 87.5%, var(--blue)),
+                        linear-gradient(150deg, var(--blue) 12%, transparent 12.5%, transparent 87%, var(--blue) 87.5%, var(--blue)),
+                        linear-gradient(30deg, var(--blue) 12%, transparent 12.5%, transparent 87%, var(--blue) 87.5%, var(--blue)),
+                        linear-gradient(150deg, var(--blue) 12%, transparent 12.5%, transparent 87%, var(--blue) 87.5%, var(--blue)),
+                        linear-gradient(60deg, var(--caramel) 25%, transparent 25.5%, transparent 75%, var(--caramel) 75%, var(--caramel)),
+                        linear-gradient(60deg, var(--caramel) 25%, transparent 25.5%, transparent 75%, var(--caramel) 75%, var(--caramel));
+    background-size: 320px 560px;
+    background-position: 0 0, 0 0, 160px 280px, 160px 280px, 0 0, 160px 280px;
+}

@@ -1,10 +1,10 @@
 
-import './css/Pages.css'
+import './css/shop.css'
 import { db } from "../firebase.config";
 import { collection, getDocs, query } from 'firebase/firestore'
 import { useState, useEffect } from "react";
 import SkewDetails from '../Components/SkewDetails';
-import { Link } from 'react-router-dom';
+import BuyNow from '../Components/BuyNow';
 
 export default function Shop() {
 
@@ -36,9 +36,7 @@ export default function Shop() {
             shoes.map((shoe) => (
               <div className="product-box">
                 <SkewDetails key={shoe.id} shoe={shoe} />
-                <div className="btn-box">
-                  <Link className="link-btn" to="/shop">Buy Now</Link>
-                </div>
+                <BuyNow />
               </div>
           ))}
       </div>
