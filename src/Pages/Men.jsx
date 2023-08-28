@@ -1,10 +1,11 @@
-import './css/men.css'
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { db } from "../firebase.config";
 import { collection, getDocs, where, query } from 'firebase/firestore'
+
 import SkewDetails from '../Components/SkewDetails';
 import BuyNow from '../Components/BuyNow';
 
+import './css/men.css'
 
 
 
@@ -36,9 +37,10 @@ export default function Men() {
      <div className="product-container">
           {shoes &&
             shoes.map((shoe) => (
-              <div className="product-box">
-                <SkewDetails key={shoe.id} shoe={shoe} />
+              <div className="product-box" key={shoe.id}>
+                <SkewDetails shoe={shoe} />
                 <BuyNow />
+                <img src={shoe.image} alt="HELLO" />
               </div>
           ))}
           

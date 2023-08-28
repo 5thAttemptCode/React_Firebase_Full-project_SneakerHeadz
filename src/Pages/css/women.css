@@ -9,3 +9,15 @@
     background-size: 320px 560px;
     background-position: 0 0, 0 0, 160px 280px, 160px 280px, 0 0, 160px 280px;
 }
+
+img{
+    position: absolute;
+    scale: 0.5;
+    filter: grayscale(30%);
+    transition: all 0.3s;
+}
+
+img:hover{
+    filter: none;
+    scale: 0.55;
+}

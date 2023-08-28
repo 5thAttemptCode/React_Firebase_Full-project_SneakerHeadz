@@ -9,6 +9,7 @@
   object-fit: cover;
   z-index: -1;
   border-radius: var(--borderRadius);
+  scale: 1;
 }
   
 .collage-header{
