@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react'
 import { db } from "../firebase.config";
 import { collection, getDocs, where, query } from 'firebase/firestore'
 
+import './css/men.css'
+
 import SkewDetails from '../Components/SkewDetails';
 import BuyNow from '../Components/BuyNow';
+import MarqueeText from '../Components/Marquee';
 
-import './css/men.css'
 
 
 
@@ -34,13 +36,14 @@ export default function Men() {
 
   return (
     <div className='section men'>
+    <MarqueeText text="MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - " />
      <div className="product-container">
           {shoes &&
             shoes.map((shoe) => (
               <div className="product-box" key={shoe.id}>
                 <SkewDetails shoe={shoe} />
                 <BuyNow />
-                <img src={shoe.image} alt="HELLO" />
+                <img className="product-img" src={shoe.image} alt="HELLO" />
               </div>
           ))}
           

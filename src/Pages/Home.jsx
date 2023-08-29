@@ -10,9 +10,9 @@ export default function Home() {
   return (
     <div className='section home'>
       <SliderContainer />
-      <MarqueeText text="RETRO KICKS - RETRO KICKS -" />
+      <MarqueeText text="SNEAKER HEADZ - SNEAKER HEADZ - SNEAKER HEADZ - SNEAKER HEADZ - SNEAKER HEADZ - SNEAKER HEADZ - SNEAKER HEADZ - SNEAKER HEADZ - SNEAKER HEADZ - SNEAKER HEADZ - SNEAKER HEADZ - SNEAKER HEADZ - " />
       <Collage />
-      <MarqueeText text="Sneaker Goals - Sneaker Goals -" />
+      <MarqueeText text="Sneaker Goals - Sneaker Goals - Sneaker Goals - Sneaker Goals - Sneaker Goals - Sneaker Goals - Sneaker Goals - Sneaker Goals - Sneaker Goals - Sneaker Goals - Sneaker Goals - Sneaker Goals - " />
       <CollageTwo />
     </div>
   )

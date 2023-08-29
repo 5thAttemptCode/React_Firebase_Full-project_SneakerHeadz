@@ -10,3 +10,9 @@
     background-position: 0 0, 0 0, 160px 280px, 160px 280px, 0 0, 160px 280px;
 }
 
+.men > .product-container > .product-box > img{
+    position: absolute;
+    scale: 0.5;
+    filter: grayscale(30%);
+    transition: all 0.3s;
+  }

@@ -1,3 +1,4 @@
+
 .women > .product-container {
     background: var(--colorTwo);
     background-image:   linear-gradient(30deg, var(--red) 12%, transparent 12.5%, transparent 87%, var(--red) 87.5%, var(--red)),
@@ -10,14 +11,5 @@
     background-position: 0 0, 0 0, 160px 280px, 160px 280px, 0 0, 160px 280px;
 }
 
-img{
-    position: absolute;
-    scale: 0.5;
-    filter: grayscale(30%);
-    transition: all 0.3s;
-}
 
-img:hover{
-    filter: none;
-    scale: 0.55;
-}
+
