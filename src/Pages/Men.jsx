@@ -33,10 +33,9 @@ export default function Men() {
      })
   }, [])
 
-
   return (
     <div className='section men'>
-    <MarqueeText text="MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - MEN - " />
+    <MarqueeText text="It wasn't all a dream, my Kickz are so fresh and so clean.&nbsp;&nbsp;-&nbsp;&nbsp;It wasn't all a dream, my Kickz are so fresh and so clean.&nbsp;&nbsp;-&nbsp;&nbsp;It wasn't all a dream, my Kickz are so fresh and so clean.&nbsp;&nbsp;-&nbsp;&nbsp;It wasn't all a dream, my Kickz are so fresh and so clean.&nbsp;&nbsp;-&nbsp;&nbsp;It wasn't all a dream, my Kickz are so fresh and so clean.&nbsp;&nbsp;-&nbsp;&nbsp;" />
      <div className="product-container">
           {shoes &&
             shoes.map((shoe) => (
@@ -46,8 +45,6 @@ export default function Men() {
                 <img className="product-img" src={shoe.image} alt="HELLO" />
               </div>
           ))}
-          
-
       </div>
     </div>
   )

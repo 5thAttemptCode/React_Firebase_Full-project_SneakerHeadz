@@ -35,7 +35,7 @@ export default function Shop() {
 
   return (
     <div className='section shop'>
-      <MarqueeText text="ALL YOU SNEAKER HEADZ BE QUIET; CHOSE A PAIR AND BUY IT - ALL YOU SNEAKER HEADZ BE QUIET; CHOSE A PAIR AND BUY IT - ALL YOU SNEAKER HEADZ BE QUIET; CHOSE A PAIR AND BUY IT - ALL YOU SNEAKER HEADZ BE QUIET; CHOSE A PAIR AND BUY IT - ALL YOU SNEAKER HEADZ BE QUIET; CHOSE A PAIR AND BUY IT - ALL YOU SNEAKER HEADZ BE QUIET; CHOSE A PAIR AND BUY IT - " />
+      <MarqueeText text="All you SneakerHeadz be quiet, chose a pair and buy it!&nbsp;&nbsp;-&nbsp;&nbsp;All you SneakerHeadz be quiet, chose a pair and buy it!&nbsp;&nbsp;-&nbsp;&nbsp;All you SneakerHeadz be quiet, chose a pair and buy it!&nbsp;&nbsp;-&nbsp;&nbsp;All you SneakerHeadz be quiet, chose a pair and buy it!&nbsp;&nbsp;-&nbsp;&nbsp;All you SneakerHeadz be quiet, chose a pair and buy it!&nbsp;&nbsp;-&nbsp;&nbsp;" />
 
       <div className="product-container">
           {shoes &&

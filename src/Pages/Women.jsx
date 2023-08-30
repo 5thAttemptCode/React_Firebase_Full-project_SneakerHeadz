@@ -37,7 +37,7 @@ export default function Women() {
   return (
     
     <div className='section women'>
-      <MarqueeText text="WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - WOMEN - " />
+      <MarqueeText text="Baby baby baby, can't you see? Sometimes your fresh Kickz just hypnotize me.&nbsp;&nbsp;-&nbsp;&nbsp;Baby baby baby, can't you see? Sometimes your fresh Kickz just hypnotize me.&nbsp;&nbsp;-&nbsp;&nbsp;Baby baby baby, can't you see? Sometimes your fresh Kickz just hypnotize me.&nbsp;&nbsp;-&nbsp;&nbsp;Baby baby baby, can't you see? Sometimes your fresh Kickz just hypnotize me.&nbsp;&nbsp;-&nbsp;&nbsp;Baby baby baby, can't you see? Sometimes your fresh Kickz just hypnotize me.&nbsp;&nbsp;-&nbsp;&nbsp;" />
 
       <div className="product-container">
           {shoes &&
