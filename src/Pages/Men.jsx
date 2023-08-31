@@ -35,7 +35,7 @@ export default function Men() {
 
   return (
     <div className='section men'>
-    <MarqueeText text="It wasn't all a dream, my Kickz are so fresh and so clean.&nbsp;&nbsp;-&nbsp;&nbsp;It wasn't all a dream, my Kickz are so fresh and so clean.&nbsp;&nbsp;-&nbsp;&nbsp;It wasn't all a dream, my Kickz are so fresh and so clean.&nbsp;&nbsp;-&nbsp;&nbsp;It wasn't all a dream, my Kickz are so fresh and so clean.&nbsp;&nbsp;-&nbsp;&nbsp;It wasn't all a dream, my Kickz are so fresh and so clean.&nbsp;&nbsp;-&nbsp;&nbsp;" />
+    <MarqueeText text="I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;" />
      <div className="product-container">
           {shoes &&
             shoes.map((shoe) => (
