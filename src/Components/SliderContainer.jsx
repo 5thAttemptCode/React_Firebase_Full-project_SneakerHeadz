@@ -1,4 +1,6 @@
+import React from 'react'
 import "./css/slider.css"
+
 
 export default function SliderContainer() {
   return (

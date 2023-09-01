@@ -1,14 +1,9 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { db } from "../firebase.config";
 import { collection, getDocs, where, query } from 'firebase/firestore'
-
 import './css/men.css'
-
-import SkewDetails from '../Components/SkewDetails';
-import BuyNow from '../Components/BuyNow';
 import MarqueeText from '../Components/Marquee';
-
-
+import ProductContainer from '../Components/ProductContainer';
 
 
 export default function Men() {
@@ -25,7 +20,6 @@ export default function Men() {
        querySnapshot.docs.forEach((doc) => {
          shoes.push({ ...doc.data(), id: doc.id})
        })
-       // console.log(shoes)
        setShoes(shoes)
      })
      .catch(err => {
@@ -35,17 +29,8 @@ export default function Men() {
 
   return (
     <div className='section men'>
-    <MarqueeText text="I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;" />
-     <div className="product-container">
-          {shoes &&
-            shoes.map((shoe) => (
-              <div className="product-box" key={shoe.id}>
-                <SkewDetails shoe={shoe} />
-                <BuyNow />
-                <img className="product-img" src={shoe.image} alt="HELLO" />
-              </div>
-          ))}
-      </div>
+      <MarqueeText text="I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;" />
+      <ProductContainer shoes={shoes} />
     </div>
   )
 }

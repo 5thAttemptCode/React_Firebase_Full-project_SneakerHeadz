@@ -1,12 +1,11 @@
 .marquee{
-    background: var(--color);
-    overflow-y: hidden;
-    border-block: 1px solid var(--color);
-  }
+  background: var(--color);
+  overflow-y: hidden;
+  border-block: 1px solid var(--color);
+}
   
-  .marquee h4{
-    font-weight: 400;
-    font-size: 20px;
-    color: var(--colorTwo);
-  }
-  
+.marquee h4{
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--background);
+}

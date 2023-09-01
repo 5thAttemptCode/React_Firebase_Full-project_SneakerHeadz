@@ -1,5 +1,7 @@
+import React from 'react'
 import Button from "./Button"
 import "./css/collage.css"
+
 
 export default function Collage() {
   return (

@@ -1,0 +1,17 @@
+.product-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 180px;
+  border-radius: var(--borderRadius);
+  border: 2px solid var(--color);
+  background: var(--greyOne);
+  background-image:   linear-gradient(30deg, var(--diffCol) 12%, transparent 12.5%, transparent 87%, var(--diffCol) 87.5%, var(--diffCol)),
+                      linear-gradient(150deg, var(--diffCol) 12%, transparent 12.5%, transparent 87%, var(--diffCol) 87.5%, var(--diffCol)),
+                      linear-gradient(30deg, var(--diffCol) 12%, transparent 12.5%, transparent 87%, var(--diffCol) 87.5%, var(--diffCol)),
+                      linear-gradient(150deg, var(--diffCol) 12%, transparent 12.5%, transparent 87%, var(--diffCol) 87.5%, var(--diffCol)),
+                      linear-gradient(60deg, var(--backgroundTwo) 25%, transparent 25.5%, transparent 75%, var(--backgroundTwo) 75%, var(--backgroundTwo)),
+                      linear-gradient(60deg, var(--backgroundTwo) 25%, transparent 25.5%, transparent 75%, var(--backgroundTwo) 75%, var(--backgroundTwo));
+  background-size: 320px 560px;
+  background-position: 0 0, 0 0, 160px 280px, 160px 280px, 0 0, 160px 280px;
+}
+  

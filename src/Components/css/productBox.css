@@ -1,0 +1,15 @@
+.product-box{
+    position: relative;
+    height: 380px;
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+  
+.product-img{
+    position: absolute;
+    scale: 0.5;
+    filter: grayscale(40%);
+}
+  
