@@ -8,6 +8,7 @@ import Cart from "./Pages/Cart"
 import Login from "./Pages/Login"
 import Nav from "./Components/Nav"
 import ShopContextProvider from './Context/ShopContext'
+import ProductPage from './Pages/ProductPage'
 
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/men" element={<Men />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/product-page" element={<ProductPage />} />
         </Routes>
       </Router>
     </ShopContextProvider>

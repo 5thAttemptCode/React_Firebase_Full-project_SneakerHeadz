@@ -1,14 +1,14 @@
 import React from "react";
 import "./css/productBox.css";
 import SkewDetails from "../Components/SkewDetails";
-import BuyNow from "../Components/BuyNow";
+import Details from "./Details";
 
 
 export default function ProductBox ({ shoe }) {
   return (
     <div className="product-box">
       <SkewDetails shoe={shoe} />
-      <BuyNow />
+      <Details />
       <img className="product-img" src={shoe.image} alt="HELLO" />
     </div>
   );
