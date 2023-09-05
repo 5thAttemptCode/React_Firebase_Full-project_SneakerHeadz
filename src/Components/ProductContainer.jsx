@@ -1,6 +1,7 @@
 import React from 'react'
 import "./css/productContainer.css"
-import ProductBox from './ProductBox';
+import ProductBox from './ProductBox'
+ 
 
 
 export default function ProductContainer({ shoes }) {

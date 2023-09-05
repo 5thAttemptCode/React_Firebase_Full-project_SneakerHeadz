@@ -11,9 +11,9 @@ export default function Nav() {
             <Link to="/">SNEAKER <br /> HEADZ</Link>
         </div>
         <div className="list">
-            <Link className="link-btn" to="/shop">SHOP</Link>
-            <Link className="link-btn" to="/women">WOMEN</Link>
-            <Link className="link-btn" to="/men">MEN</Link>
+            <Link className="nav-btn" to="/shop">SHOP</Link>
+            <Link className="nav-btn" to="/women">WOMEN</Link>
+            <Link className="nav-btn" to="/men">MEN</Link>
         </div>
         <div className="user">
             <Link to="/cart">

@@ -3,6 +3,7 @@ import SliderContainer from "../Components/SliderContainer"
 import Collage from "../Components/Collage"
 import MarqueeText from "../Components/Marquee"
 import "./css/home.css"
+import Subscribe from '../Components/Subscribe'
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <SliderContainer />
       <MarqueeText text="K.R.E.A.M Kickz Rule Everything Around Me&nbsp;&nbsp;-&nbsp;&nbsp;K.R.E.A.M Kickz Rule Everything Around Me&nbsp;&nbsp;-&nbsp;&nbsp;K.R.E.A.M Kickz Rule Everything Around Me&nbsp;&nbsp;-&nbsp;&nbsp;K.R.E.A.M Kickz Rule Everything Around Me&nbsp;&nbsp;-&nbsp;&nbsp;K.R.E.A.M Kickz Rule Everything Around Me&nbsp;&nbsp;-&nbsp;&nbsp;" />
       <Collage />
+      <Subscribe />
     </div>
   )
 }
