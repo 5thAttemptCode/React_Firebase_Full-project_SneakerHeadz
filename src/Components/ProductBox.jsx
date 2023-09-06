@@ -8,8 +8,9 @@ export default function ProductBox ({ shoe }) {
   return (
     <div className="product-box">
       <SkewDetails shoe={shoe} />
-      <Details />
+      <Details shoe={shoe}/>
       <img className="product-img" src={shoe.image} alt="HELLO" />
     </div>
   );
 };
+
