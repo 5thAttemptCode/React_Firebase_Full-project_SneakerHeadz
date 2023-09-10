@@ -9,6 +9,8 @@ import ProductContainer from '../Components/ProductContainer';
 export default function Shop() {
   
   const [ shoes, setShoes ] = useState()
+  const [ selectedShoeId, setSelectedShoeId ] = useState()
+
 
   useEffect(() => {
    const shoeRef = collection(db, "Sneaker")
@@ -20,7 +22,7 @@ export default function Shop() {
        querySnapshot.docs.forEach((doc) => {
          shoes.push({ ...doc.data(), id: doc.id})
        })
-       // console.log(shoes)
+       
        setShoes(shoes)
      })
      .catch(err => {
@@ -31,7 +33,7 @@ export default function Shop() {
   return (
     <div className='section shop'>
       <MarqueeText text="All you SneakerHeadz be quiet, choose a pair and buy it!&nbsp;&nbsp;-&nbsp;&nbsp;All you SneakerHeadz be quiet, choose a pair and buy it!&nbsp;&nbsp;-&nbsp;&nbsp;All you SneakerHeadz be quiet, choose a pair and buy it!&nbsp;&nbsp;-&nbsp;&nbsp;All you SneakerHeadz be quiet, choose a pair and buy it!&nbsp;&nbsp;-&nbsp;&nbsp;All you SneakerHeadz be quiet, choose a pair and buy it!&nbsp;&nbsp;-&nbsp;&nbsp;" />
-      <ProductContainer shoes={shoes} />
+      <ProductContainer shoes={shoes} setSelectedShoeId={setSelectedShoeId} />
     </div>
   )
 }
