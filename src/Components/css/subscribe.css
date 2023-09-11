@@ -28,9 +28,17 @@
     width: 300px;
     padding: 5px;
     font-size: 18px;
+    outline: none;
+    border: none;
 }
 
 .subscribe-wrapper > div > button{
     padding: 5px 15px;
     font-size: 18px;
+    outline: none;
+    border: none;
+}
+
+.subscribe-wrapper > div > button:hover{
+    cursor: pointer;
 }

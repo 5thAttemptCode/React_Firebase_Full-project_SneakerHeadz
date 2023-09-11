@@ -18,9 +18,10 @@ import ProductPage from "./ProductPage";
 export default function Details({ shoe }) {
   return (
     <div className="btn-box">
-      <Link shoe={shoe} className="buy-now" to={shoe.id} element={<ProductPage />}>
+      <Link className="buy-now" to={`/shoes/${shoe.id}`} state={{ shoe }} element={<ProductPage />}>
         Details
       </Link>
     </div>
   );
 }
+

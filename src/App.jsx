@@ -21,11 +21,11 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/shoes/:shoeId" element={<ProductPage />} />
           <Route path="/women" element={<Women />} />
           <Route path="/men" element={<Men />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/product-page" element={<ProductPage />} />
         </Routes>
         <Footer />
       </Router>

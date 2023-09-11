@@ -1,49 +1,20 @@
-// import React from 'react'
-// import { useNavigate } from "react-router-dom";
+import React from 'react'
+import { useNavigate, useLocation } from "react-router-dom";
 
 
+export default function ProductPage() {
 
-// export default function ProductPage() {
-
-//   let navigate = useNavigate()
-
-//   return (
-//     <div className="section product-page">
-//       <button className='back' onClick={() => navigate(-1)}>BACK</button>
-//     </div>
-//   )
-// }
-
-import React from "react";
-import { Outlet, useParams } from "react-router-dom";
-import { db } from "../firebase.config";
-import { doc, getDoc } from "firebase/firestore";
-
-export default function ProductPage(props) {
-  const { shoeId } = useParams();
-  // const [shoe, setShoe] = useState();
-
-  // useEffect(() => {
-  //   const shoeRef = doc(db, "Sneaker", shoeId);
-
-  //   getDoc(shoeRef)
-  //     .then((doc) => {
-  //       setShoe(doc.data());
-  //     })
-  //     .catch((err) => {
-  //       console.log(err.message);
-  //     });
-  // }, [shoeId]);
+  let navigate = useNavigate()
+  const location = useLocation();
+  const shoe = location.state.shoe;
 
   return (
-    <div className="product-page">
-      <h1>{shoe.name}</h1>
-      <img src={shoe.image} alt={shoe?.name} />
-      <p>Price: ${shoe.price}</p>
-      <p>{shoeId}</p>
-      <button>Add to cart</button>
+    <div className="section product-page">
       <button className='back' onClick={() => navigate(-1)}>BACK</button>
-      <Outlet />
+      <p>{shoe.name}</p>
+      <p>{shoe.price}</p>
+      <img src={shoe.image} alt="" />
     </div>
-  );
+  )
 }
+
