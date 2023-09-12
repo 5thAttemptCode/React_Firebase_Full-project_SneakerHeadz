@@ -8,9 +8,10 @@
     align-items: center;
 }
 
-.product-box > .btn-box > .buy-now{
+.btn-box > .buy-now{
     background: white;
-    color: black;
+    color: var(--color);
+    border: 1px solid var(--color);
     padding: 10px 25px;
     border-radius: var(--borderRadius);
     font-weight: 500;

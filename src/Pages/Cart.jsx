@@ -9,7 +9,7 @@ export default function Cart({ shoes }) {
   const { cartItems } = useContext(ShopContext)
 
   return (
-    <div className="cart">
+    <div className="section cart">
       <div>
         <h1>YOUR CART</h1>
       </div>

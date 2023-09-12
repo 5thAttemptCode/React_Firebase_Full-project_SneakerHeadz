@@ -9,6 +9,7 @@ export default function Collage() {
         <img src="../public/24.svg" alt="" />
         <p className="collage-header">ALL YOU SNEAKER HEADS <br /> BE QUIET! CHOOSE A PAIR <br /> AND BUY IT!</p>
         <Button to="/shop" button="SHOP NOW" />
+        
     </div>
   )
 }

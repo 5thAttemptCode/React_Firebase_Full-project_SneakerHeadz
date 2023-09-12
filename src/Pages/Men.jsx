@@ -4,6 +4,7 @@ import { collection, getDocs, where, query } from 'firebase/firestore'
 import './css/men.css'
 import MarqueeText from '../Components/Marquee';
 import ProductContainer from '../Components/ProductContainer';
+import SliderText from '../Components/SliderText';
 
 
 export default function Men() {
@@ -30,6 +31,9 @@ export default function Men() {
   return (
     <div className='section men'>
       <MarqueeText text="I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;I got 99 Problems but fresh Kickz ain't one.&nbsp;&nbsp;-&nbsp;&nbsp;" />
+      <div className="section-name">
+        <SliderText text="MEN" />
+      </div>
       <ProductContainer shoes={shoes} />
     </div>
   )

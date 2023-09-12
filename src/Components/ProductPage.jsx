@@ -1,5 +1,8 @@
 import React from 'react'
 import { useNavigate, useLocation } from "react-router-dom";
+import BuyNow from './BuyNow';
+import "./css/productPage.css"
+
 
 
 export default function ProductPage() {
@@ -9,11 +12,20 @@ export default function ProductPage() {
   const shoe = location.state.shoe;
 
   return (
-    <div className="section product-page">
-      <button className='back' onClick={() => navigate(-1)}>BACK</button>
-      <p>{shoe.name}</p>
-      <p>{shoe.price}</p>
-      <img src={shoe.image} alt="" />
+    <div className="product-page">
+      <button className='back' onClick={() => navigate(-1)}>←</button>
+      <div className='image'>
+        <img src={shoe.image} alt="" />
+      </div>
+      <div className='details'>
+        <div>
+          <p className='p-na-pr'>{shoe.name}</p>
+          <p className='p-na-pr'>${shoe.price}</p>
+          <p>{shoe.type}</p>
+          <p>{shoe.description}</p>
+        </div>
+        <BuyNow />
+      </div>
     </div>
   )
 }
