@@ -1,0 +1,44 @@
+.subscribe{
+    height: 50vh;
+    width: 100%;
+    background: var(--color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+}
+
+.subscribe-wrapper > div > h3{
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.subscribe-wrapper > div:nth-child(2){
+    display: flex;
+    margin-top: 20px;
+}
+
+.subscribe-wrapper > div > input{
+    width: 300px;
+    padding: 5px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+}
+
+.subscribe-wrapper > div > button{
+    padding: 5px 15px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+}
+
+.subscribe-wrapper > div > button:hover{
+    cursor: pointer;
+}

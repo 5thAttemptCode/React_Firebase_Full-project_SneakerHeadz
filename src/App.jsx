@@ -1,15 +1,15 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Home from "./Pages/Home"
-import Shop from "./Pages/Shop"
-import Men from "./Pages/Men"
-import Women from "./Pages/Women"
-import Cart from "./Pages/Cart"
-import Login from "./Pages/Login"
-import Nav from "./Components/Nav"
+import Home from "./Pages/home/Home"
+import Shop from "./Pages/shop/Shop"
+import Men from "./Pages/men/Men"
+import Women from "./Pages/women/Women"
+import Cart from "./Pages/cart/Cart"
+import Login from "./Pages/login/Login"
+import Nav from "./Components/nav/Nav"
 import ShopContextProvider from './Context/ShopContext'
-import ProductPage from './Components/ProductPage'
-import Footer from './Components/Footer'
+import ProductPage from './Components/productPage/ProductPage'
+import Footer from './Components/footer/Footer'
 
 
 

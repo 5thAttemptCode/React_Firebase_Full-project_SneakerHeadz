@@ -1,0 +1,18 @@
+.product-box > .btn-box{
+    transform: skewY(30deg);
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-box > .buy-now{
+    background: white;
+    color: var(--color);
+    border: 1px solid var(--color);
+    padding: 10px 25px;
+    border-radius: var(--borderRadius);
+    font-weight: 500;
+}
