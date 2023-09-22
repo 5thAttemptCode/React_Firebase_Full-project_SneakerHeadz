@@ -1,33 +1,35 @@
 import React, { useState } from 'react'
-import "./login.css"
+import Login from './Login'
 import { Link, useNavigate } from 'react-router-dom'
-import SignUp from './SignUp'
+import "./login.css"
 import { UserAuth } from '../../Context/AuthContext'
 
 
-export default function Login() {
+export default function SignUp() {
+
   const [ email, setEmail ] = useState("")
   const [ password, setPassword ] = useState("")
   const [ error, setError ] = useState("")
+  //We grab the createNewUser from UserAuth from the Context file(line 29)
+  const { createNewUser } = UserAuth()
   const navigate = useNavigate()
-  const { signIn } = UserAuth()
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setError("")
-    try{
-      await signIn(email, password)
+    e.preventDefault();
+    setError('');
+    try {
+      await createNewUser(email, password);
       navigate("/account")
     } catch (e) {
-      setError(e.message)
+      setError(e.message);
       console.log(e.message);
     }
-  }
+  };
 
   return (
     <div className='form-wrapper'>
-      <div className="form-container login">
-        <h2>Login to your account</h2>
+      <div className="form-container signup">
+        <h2>Sign up for your free account</h2>
         <form onSubmit={handleSubmit}>
             <div>
               <label>Enter your email</label>
@@ -39,7 +41,8 @@ export default function Login() {
             </div>
             <button>Submit</button>
         </form>
-        <p>Don't have an account yet? Click &nbsp;<Link className='underline' to="/signup" element={<SignUp />}>here</Link></p>
+     
+        <p>Already have an account? Login &nbsp;<Link className='underline' to="/login" element={<Login />}>here</Link></p>
       </div>
     </div>
   )

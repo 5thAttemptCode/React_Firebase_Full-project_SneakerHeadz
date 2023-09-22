@@ -19,7 +19,7 @@ export default function Nav() {
             <Link to="/cart">
               <ShoppingCartSimple size={30} />
             </Link>
-            <Link to="/login">
+            <Link to="/account">
               <UserCircle size={30} />
             </Link>
         </div>

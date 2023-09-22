@@ -7,15 +7,18 @@ import Women from "./Pages/women/Women"
 import Cart from "./Pages/cart/Cart"
 import Login from "./Pages/login/Login"
 import Nav from "./Components/nav/Nav"
-import ShopContextProvider from './Context/ShopContext'
 import ProductPage from './Components/productPage/ProductPage'
 import Footer from './Components/footer/Footer'
+import { AuthContextProvider } from './Context/AuthContext'
+import SignUp from './Pages/login/SignUp'
+import ProtectedRoute from './Components/ProtectedRoute'
+import Account from './Pages/account/Account'
 
 
 
 export default function App() {
   return (
-    <ShopContextProvider>
+    <AuthContextProvider>
       <Router>
         <Nav />
         <Routes>
@@ -24,11 +27,14 @@ export default function App() {
           <Route path="/shoes/:shoeId" element={<ProductPage />} />
           <Route path="/women" element={<Women />} />
           <Route path="/men" element={<Men />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
+          <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} />
         </Routes>
         <Footer />
       </Router>
-    </ShopContextProvider>
+    </AuthContextProvider>
+
   )
 }
