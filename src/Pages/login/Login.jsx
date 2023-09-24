@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "./login.css"
+import "./form.css"
 import { Link, useNavigate } from 'react-router-dom'
 import SignUp from './SignUp'
 import { UserAuth } from '../../Context/AuthContext'
