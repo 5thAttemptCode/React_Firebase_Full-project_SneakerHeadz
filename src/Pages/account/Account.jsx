@@ -20,8 +20,8 @@ export default function Account() {
   return (
     <div className='section-margin account'>
       <div className="account-wrapper">
-        <p>Account email: {user && user.email}</p>
-        <p>Account id: 187685</p>
+        <p><span>Account email: </span>{user && user.email}</p>
+        <p><span>Account id:</span> 100231</p>
         <p>Recent orders:</p>
         <button onClick={handleLogout}>Logout</button>
       </div>
