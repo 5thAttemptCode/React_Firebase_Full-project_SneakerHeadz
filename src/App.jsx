@@ -13,6 +13,7 @@ import { AuthContextProvider } from './Context/AuthContext'
 import SignUp from './Pages/login/SignUp'
 import ProtectedRoute from './Components/ProtectedRoute'
 import Account from './Pages/account/Account'
+import LoggedInUser from './Components/loggedInUser/LoggedInUser'
 
 
 
@@ -21,6 +22,7 @@ export default function App() {
     <AuthContextProvider>
       <Router>
         <Nav />
+        <LoggedInUser />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
