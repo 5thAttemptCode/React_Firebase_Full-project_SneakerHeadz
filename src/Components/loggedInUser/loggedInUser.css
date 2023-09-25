@@ -1,0 +1,14 @@
+.logged-in-user{
+    position: fixed;
+    top: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background: var(--background);
+    z-index: 10;
+}
+
+.logged-in-user > p{
+    font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
+    padding: 0 5rem 1rem 0;
+}
