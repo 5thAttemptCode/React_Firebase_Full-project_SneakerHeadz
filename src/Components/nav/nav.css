@@ -6,7 +6,7 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 5vw;
+  padding-inline: 5vw;
   z-index: 1000;
   background: var(--background);
 }
@@ -16,8 +16,7 @@ nav > .logo{
 }
 
 nav .logo a{
-  font-size: 30px;
-  letter-spacing: 1px;
+  font-size: clamp(1.25rem, 0.4688rem + 2.5vw, 1.875rem);
   color: var(--color);
   font-family: var(--graffiti);
 }
@@ -35,10 +34,30 @@ nav a{
 
 nav .list a{
   font-weight: 600;
-  font-size: 20px;
+  font-size: clamp(1.125rem, 0.9688rem + 0.5vw, 1.25rem);
 }
 
 nav .user{
   display: flex;
-  gap: 30px
+  gap: var(--gap-size);
+}
+
+@media(max-width: 990px){
+  nav .list {
+    width: 40vw
+  }
+}
+
+@media(max-width: 550px){
+  nav .list {
+    position: absolute;
+    bottom: -2vh;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background: var(--background);
+  }
 }

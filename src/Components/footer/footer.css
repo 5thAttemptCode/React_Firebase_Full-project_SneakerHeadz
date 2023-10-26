@@ -1,8 +1,19 @@
 .footer{
     background: var(--greyOne);
     display: flex;
-    gap: 50px;
+    flex-wrap: wrap;
     justify-content: flex-start;
-    padding: 50px;
+    gap: var(--gap-size);
+    padding: clamp(1.25rem, -1.0938rem + 7.5vw, 3.125rem);
     font-size: 12px;
 }
+
+/* .footer > div{
+    flex: 0 0 20%;
+}
+
+@media (max-width: 768px){
+    .footer > div{
+        flex: 0 0 30%
+    }
+} */

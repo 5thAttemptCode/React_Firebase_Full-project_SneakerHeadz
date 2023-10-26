@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/most-wasted');
+@import url('https://fonts.cdnfonts.com/css/a-attack-graffiti');
 
 :root{
   --color: #000000;
@@ -6,7 +6,11 @@
   --backgroundTwo: #e9e9e9;
   --greyOne: #d7d6d6;
   --borderRadius: 5px;
-  --graffiti: 'Most Wazted', sans-serif;
+  --graffiti: 'a Attack Graffiti', sans-serif;
+
+  --gap-size: clamp(1.25rem, 0.4688rem + 2.5vw, 1.875rem);
+  --product-width: 320px;
+  --product-height: calc(var(--product-width) * 1.792)
 }
 
 *{
@@ -24,13 +28,13 @@ body{
 }
 
 .section{
-  margin-top: 15vh;
-  padding: 7vh 0;
   width: 100%;
+  margin-top: 17vh;
+  padding: 7vh 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: clamp(1.5625rem, -0.3906rem + 6.25vw, 3.125rem);
   background: radial-gradient(rgba(0, 0, 0, 0.2) 8%, transparent 8%);
   background-position: 0% 0%;
   background-size: 3vmin 3vmin;
@@ -38,13 +42,65 @@ body{
 }
 
 .container{
-  height: 65vh;
-  width: calc(100% - 100px);
+  height: 80vh;
+  width: calc(100% - clamp(1.25rem, -5rem + 20vw, 6.25rem));
   border-radius: var(--borderRadius);
   border: 2px solid var(--color);
   z-index: 1;
 }
 
+.p-na-pr{
+  font-weight: 700;
+  font-size: clamp(1rem, 0.6875rem + 1vw, 1.25rem);
+}
+
+.padding-em{
+  padding-left: 1em;
+}
 
 
+/*------------------------------------------*/
+@media(max-width: 1300px){
+  :root{
+    --product-width: 280px
+  }
+}
 
+@media(max-width: 1200px){
+  :root{
+    --product-width: clamp(320px, 350px, 350px);
+  }
+}
+
+@media(max-width: 1024px){
+  :root{
+    --product-width: clamp(15.625rem, 14.0625rem + 5vw, 16.875rem);
+  }
+}
+
+@media(max-width: 830px){
+  :root{
+    --product-width: clamp(18.75rem, 14.8438rem + 12.5vw, 21.875rem);
+  }
+}
+
+@media(max-width: 650px){
+  :root{
+    --product-width: clamp(15.625rem, 11.7188rem + 12.5vw, 18.75rem);
+  }
+}
+
+@media(max-width: 500px){
+  :root{
+    --product-width: 350px
+  }
+  .p-na-pr{
+    font-size: 20px;
+  }
+}
+
+@media(max-width: 360px){
+  :root{
+    --product-width: 300px
+  }
+}

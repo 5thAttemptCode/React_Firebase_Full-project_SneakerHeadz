@@ -4,11 +4,18 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    background: var(--background);
+    align-items: center;
+    background: rgb(236, 235, 235);
     z-index: 10;
 }
 
 .logged-in-user > p{
     font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
-    padding: 0 5rem 1rem 0;
+    padding: 1vh 5vw;
+}
+
+@media(max-width: 550px){
+    .logged-in-user{
+        top: 17vh;
+    }
 }

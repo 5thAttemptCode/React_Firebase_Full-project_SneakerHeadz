@@ -1,5 +1,5 @@
 .slider-text > h1{
-    font-size: 60px;
+    font-size: clamp(3.125rem, 2.3438rem + 2.5vw, 3.75rem);
     font-weight: 800;
     font-style: italic;
     color: white;

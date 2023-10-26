@@ -13,12 +13,11 @@
 }
   
 .collage-header{
-  font-size: 90px;
-  -webkit-text-fill-color: rgb(0, 255, 251);
-  -webkit-text-stroke: 2px solid rgb(62, 1, 81);
-  -webkit-text-stroke-width: 2px;;
+  font-size: clamp(3.75rem, 1.4063rem + 7.5vw, 5.625rem);  -webkit-text-fill-color: rgb(0, 255, 251);
+  -webkit-text-stroke: 1px solid rgb(62, 1, 81);
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(62, 1, 81);
-  margin: 30px;
+  margin: clamp(0.625rem, -0.9375rem + 5vw, 1.875rem);
   font-family: var(--graffiti);
 }
   
