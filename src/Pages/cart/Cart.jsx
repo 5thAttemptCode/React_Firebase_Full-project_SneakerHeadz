@@ -1,20 +1,51 @@
 import React, { useContext } from 'react'
-import { db } from "../../firebase.config";
-import "./cart.css"
+import './cart.css'
+
+import { ShopContext } from '../../Context/ShopContext'
+
+import ShoeInCart from './ShoeInCart'
+import useSneaker from '../../Utils/useSneaker'
 
 
-export default function Cart({ shoes }) {
+export default function Cart() {
 
+  const { sneaker, isLoading } = useSneaker()
+  const { cartItems, getTotalCartAmount } = useContext(ShopContext)
+  const totalAmount = getTotalCartAmount().toFixed(2)
+
+  if (isLoading) {
+    return <div>Loading...</div>
+  }
 
   return (
     <div className="section cart">
+      <h1>Your Cart</h1>
       <div>
-        <h1>YOUR CART</h1>
+        {sneaker.map((shoe) => {
+          if (cartItems[shoe.id] !== 0) {
+            return (
+              <div key={shoe.id}>
+                <ShoeInCart data={shoe} />
+                <br />
+              </div>
+            )
+          }
+        })}
       </div>
-      <div className="cartItems">
-      {shoes && shoes.map((shoe) => 
-        <ProductBox key={shoe.id} shoe={shoe} />)}
-      </div>
+
+      {totalAmount > 0 ? (
+        <div className='total'>
+          <hr />
+          <hr />
+          <br />
+          <p>TOTAL ${totalAmount}</p>
+          <div></div>
+          <br />
+          <button className='button'>BUY NOW</button>
+        </div>
+        ) : (
+          <h2>Step up your shoe game!</h2>
+      )}
     </div>
   )
 }

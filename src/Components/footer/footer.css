@@ -7,13 +7,3 @@
     padding: clamp(1.25rem, -1.0938rem + 7.5vw, 3.125rem);
     font-size: 12px;
 }
-
-/* .footer > div{
-    flex: 0 0 20%;
-}
-
-@media (max-width: 768px){
-    .footer > div{
-        flex: 0 0 30%
-    }
-} */

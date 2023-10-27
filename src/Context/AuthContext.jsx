@@ -1,10 +1,11 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { auth } from "../firebase.config"
+
+import { auth } from '../Utils/firebase.config'
 import { createUserWithEmailAndPassword, 
+         onAuthStateChanged,
          signInWithEmailAndPassword, 
-         signOut, 
-         onAuthStateChanged 
-        } from "firebase/auth"
+         signOut
+        } from 'firebase/auth'
 
 
 const UserContext = createContext()
@@ -37,7 +38,6 @@ export const AuthContextProvider = ({children}) => {
             unsubscribe()
         }
     }, [])
-
 
     return (
                             //In the value property, it's where we export our functions(createNewUser)

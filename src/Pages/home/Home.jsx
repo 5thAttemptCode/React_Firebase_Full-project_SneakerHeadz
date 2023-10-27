@@ -1,12 +1,14 @@
 import React from 'react'
-import SliderContainer from "../../Components/slider/SliderContainer"
-import Collage from "../../Components/collage/Collage"
-import MarqueeText from "../../Components/marquee/Marquee"
 import "./home.css"
-import Subscribe from '../../Components/subscribe/Subscribe'
+
+import Collage from '../../Components/collage/index'
+import MarqueeText from '../../Components/marquee/index'
+import SliderContainer from '../../Components/slider/index'
+import Subscribe from '../../Components/subscribe/index'
 
 
 export default function Home() {
+  
   return (
     <div className='section home'>
       <MarqueeText text="SO FRESH AND SO CLEAN!&nbsp;&nbsp;-&nbsp;&nbsp;SO FRESH AND SO CLEAN!&nbsp;&nbsp;-&nbsp;&nbsp;SO FRESH AND SO CLEAN!&nbsp;&nbsp;-&nbsp;&nbsp;SO FRESH AND SO CLEAN!&nbsp;&nbsp;-&nbsp;&nbsp;SO FRESH AND SO CLEAN!&nbsp;&nbsp;-&nbsp;&nbsp;SO FRESH AND SO CLEAN!&nbsp;&nbsp;-&nbsp;&nbsp;" />

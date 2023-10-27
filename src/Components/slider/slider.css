@@ -4,20 +4,20 @@
   background-image: repeating-conic-gradient(var(--colorTwo) 0, var(--colorTwo) 20deg, transparent 10deg, transparent 40deg);
 }
 
-.embla__container {
+.slider_container > .embla__container {
   display: flex;
   width: 100%;
   height: 100%;
 }
 
-.embla__slide {
+.slider_container > .embla__container > .embla__slide {
   position: relative;
   flex: 0 0 100%;
   width: 100%;
   height: 100%;
 }
 
-.embla__slide > div{
+.slider_container > .embla__container > .embla__slide > div{
   height: 100%;
   width: 100%;
   padding-left: 5vh;
@@ -27,7 +27,7 @@
   align-items: flex-start;
 }
 
-.embla__slide > img {
+.slider_container > .embla__container > .embla__slide > img {
   position: absolute;
   top: 0;
   width: 100%;

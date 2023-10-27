@@ -11,45 +11,61 @@ nav{
   background: var(--background);
 }
 
+nav a{
+  color: var(--color);
+}
+
 nav > .logo{
   text-align: center;
 }
 
-nav .logo a{
+nav > .logo a{
   font-size: clamp(1.25rem, 0.4688rem + 2.5vw, 1.875rem);
   color: var(--color);
   font-family: var(--graffiti);
 }
 
-nav .list{
+nav > .list{
   width: 25vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-nav a{
-  color: var(--color);
-}
-
-nav .list a{
+nav > .list a{
   font-weight: 600;
   font-size: clamp(1.125rem, 0.9688rem + 0.5vw, 1.25rem);
 }
 
-nav .user{
+nav > .user{
+  position: relative;
   display: flex;
   gap: var(--gap-size);
 }
 
+.cart-count{
+  position: absolute;
+  top: -30%;
+  left: 20%;
+  background: red;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.5rem;
+  aspect-ratio: 1;
+}
+
+/*________________________________________________*/
 @media(max-width: 990px){
-  nav .list {
+  nav > .list {
     width: 40vw
   }
 }
 
 @media(max-width: 550px){
-  nav .list {
+  nav > .list {
     position: absolute;
     bottom: -2vh;
     left: 0;

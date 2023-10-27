@@ -1,32 +1,20 @@
-import React, { useState, useEffect } from 'react'
-import { db } from "../../firebase.config";
-import { collection, getDocs, where, query } from 'firebase/firestore'
+import React from 'react'
 import './men.css'
-import MarqueeText from '../../Components/marquee/Marquee';
-import ProductContainer from '../../Components/productContainer/ProductContainer';
-import SliderText from "../../Components/sliderText/SliderText";
+
+import MarqueeText from '../../Components/marquee/index'
+import ProductContainer from '../../Components/productContainer/index'
+import SliderText from '../../Components/sliderText/index'
+import useSneaker from '../../Utils/useSneaker'
 
 
 export default function Men() {
 
-  const [ shoes, setShoes ] = useState()
+  const { sneaker, isLoading } = useSneaker()
+  const menShoes = sneaker.filter(shoe => shoe.type === "male")
 
-  useEffect(() => {
-   const shoeRef = collection(db, "Sneaker")
-   const q = query(shoeRef, where("type", "==", "male"))
-   
-   getDocs(q)
-     .then((querySnapshot) => {
-       let shoes = []
-       querySnapshot.docs.forEach((doc) => {
-         shoes.push({ ...doc.data(), id: doc.id})
-       })
-       setShoes(shoes)
-     })
-     .catch(err => {
-       console.log(err.message)
-     })
-  }, [])
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className='section men'>
@@ -34,7 +22,7 @@ export default function Men() {
       <div className="section-name">
         <SliderText text="MEN" />
       </div>
-      <ProductContainer shoes={shoes} />
+      <ProductContainer data={menShoes} />
     </div>
   )
 }

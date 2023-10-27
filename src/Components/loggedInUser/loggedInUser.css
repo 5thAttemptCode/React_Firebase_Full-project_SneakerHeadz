@@ -11,9 +11,12 @@
 
 .logged-in-user > p{
     font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
+    color: rgb(0, 0, 0, 0.6);
     padding: 1vh 5vw;
 }
 
+
+/*________________________________________________*/
 @media(max-width: 550px){
     .logged-in-user{
         top: 17vh;

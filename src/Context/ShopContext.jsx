@@ -1,43 +1,72 @@
-import React, { useState, createContext } from 'react'
-import { db } from "../firebase.config";
+import { createContext, useState, useEffect } from 'react'
+import useSneaker from '../Utils/useSneaker'
+
 
 export const ShopContext = createContext(null)
 
-const getDefaultCart = () => {
-    let cart = {}
-    for(let i = 1; i < db.length + 1; i++){
-        cart[i] = 0
+export const ShopContextProvider = (props) => {
+    const [ cartItems, setCartItems ] = useState({})
+    const { sneaker, isLoading } = useSneaker()
+
+    useEffect(() => {
+        if (!isLoading) {
+            let defaultCart = {}
+            sneaker.forEach((item) => {
+                defaultCart[item.id] = 0
+            })
+            setCartItems(defaultCart)
+        }
+    }, [sneaker, isLoading])
+
+    //___________________________________________
+    const getTotalCartAmount = () => {
+        let totalAmount = 0
+        for (const item in cartItems) {
+            if (cartItems[item] > 0) {
+                let itemInfo = sneaker.find((shoe) => String(shoe.id) === String(item))
+                if (itemInfo) {
+                    totalAmount += itemInfo.price * cartItems[item]
+                } else {
+                    console.warn(`The shoe found with id ${item} is not found`)
+                }
+            }
+        }
+        return totalAmount
     }
-}
 
-export default function ShopContextProvider(props) {
+    //___________________________________________
+    const addToCart = (itemId) => {
+        setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1}))
+    }
 
-    const [ cartItems, setCartItems ] = useState(getDefaultCart())
+    //___________________________________________
+    const removeFromCart = (itemId) => {
+        setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) - 1}))
+    }
 
-  
-  const addToCart = (itemId) => {
-                            //We are setting the previous state from 0 of item with id: 1, to +1 for id: 1
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1}))
-  }
+    //___________________________________________
+    const updateCartItemCount = (newAmount, itemId) => {
+        setCartItems((prev) => ({ ...prev, [itemId]: newAmount}))
+    }
 
+    //___________________________________________
+    const checkout = () => {
+        setCartItems(getDefaulCart())
+    }
+    
+    //___________________________________________
+    const contextValue = {
+        cartItems,
+        addToCart,
+        removeFromCart,
+        updateCartItemCount,
+        getTotalCartAmount,
+        checkout
+    }
 
-  const removeFromCart = (itemId) => {
-                            //Same logic just substracting => setting the state to minus 1
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1}))
-  }
-
-
-  const updateCartItemCount = (newAmount, itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: newAmount }))
-  }
-
-  const contextValue = {cartItems, addToCart, removeFromCart, updateCartItemCount}
-
-  return (
-    <div>
-      <ShopContext.Provider value={contextValue}>
-        {props.children}
-      </ShopContext.Provider>
-    </div>
-  )
+    return (
+        <ShopContext.Provider value={contextValue}>
+            {props.children}
+        </ShopContext.Provider>
+    )
 }

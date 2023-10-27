@@ -8,23 +8,23 @@
     align-items: center;
 }
 
-.subscribe-wrapper{
+.subscribe > .subscribe-wrapper{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.subscribe-wrapper > div > h3{
+.subscribe > .subscribe-wrapper > div > h3{
     font-size: clamp(1.375rem, 0.9063rem + 1.5vw, 1.75rem);
     font-weight: 400;
 }
 
-.subscribe-wrapper > div:nth-child(2){
+.subscribe > .subscribe-wrapper > div:nth-child(2){
     display: flex;
     margin-top: 20px;
 }
 
-.subscribe-wrapper > div > input{
+.subscribe > .subscribe-wrapper > div > input{
     width: 300px;
     padding: 5px;
     font-size: 18px;
@@ -32,17 +32,19 @@
     border: none;
 }
 
-.subscribe-wrapper > div > button{
+.subscribe > .subscribe-wrapper > div > button{
     padding: 5px 15px;
     font-size: 18px;
     outline: none;
     border: none;
 }
 
-.subscribe-wrapper > div > button:hover{
+.subscribe > .subscribe-wrapper > div > button:hover{
     cursor: pointer;
 }
 
+
+/*________________________________________________*/
 @media(max-width: 450px){
     .subscribe-wrapper > div{
         width: 320px
