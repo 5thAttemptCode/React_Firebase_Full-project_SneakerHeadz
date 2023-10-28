@@ -25,16 +25,16 @@
 }
 
 .subscribe > .subscribe-wrapper > div > input{
-    width: 300px;
+    width: clamp(12.5rem, 4.6875rem + 25vw, 18.75rem);
     padding: 5px;
-    font-size: 18px;
+    font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
     outline: none;
     border: none;
 }
 
 .subscribe > .subscribe-wrapper > div > button{
     padding: 5px 15px;
-    font-size: 18px;
+    font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
     outline: none;
     border: none;
 }
