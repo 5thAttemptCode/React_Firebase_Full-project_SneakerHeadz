@@ -47,7 +47,7 @@ nav > .user{
   position: absolute;
   top: -30%;
   left: 20%;
-  background: red;
+  background: rgb(255, 0, 200);
   border-radius: 50%;
   color: white;
   display: flex;

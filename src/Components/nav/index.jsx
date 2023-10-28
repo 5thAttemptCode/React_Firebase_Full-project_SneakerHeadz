@@ -3,7 +3,7 @@ import './nav.css'
 
 import { Link } from 'react-router-dom'
 import { ShopContext } from '../../Context/ShopContext'
-import { ShoppingCartSimple, UserCircle } from '@phosphor-icons/react'
+import { ShoppingBag, UserCircle } from '@phosphor-icons/react'
 
 
 export default function Nav() {
@@ -26,7 +26,7 @@ export default function Nav() {
         </div>
         <div className="user">
             <Link to="/cart">
-              <ShoppingCartSimple size={30} />
+              <ShoppingBag size={30} />
               {cartItemCount > 0 && 
                 <div className='cart-count'>
                   {cartItemCount}

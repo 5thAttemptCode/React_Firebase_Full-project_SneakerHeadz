@@ -3,6 +3,7 @@ import './cart.css'
 
 import { ShopContext } from '../../Context/ShopContext'
 
+import PayPalButton from '../../Components/paypal'
 import ShoeInCart from './ShoeInCart'
 import useSneaker from '../../Utils/useSneaker'
 
@@ -32,7 +33,6 @@ export default function Cart() {
           }
         })}
       </div>
-
       {totalAmount > 0 ? (
         <div className='total'>
           <hr />
@@ -41,7 +41,9 @@ export default function Cart() {
           <p>TOTAL ${totalAmount}</p>
           <div></div>
           <br />
-          <button className='button'>BUY NOW</button>
+          <div className="paypal" >
+            <PayPalButton totalAmount={totalAmount}/>
+          </div>
         </div>
         ) : (
           <h2>Step up your shoe game!</h2>
