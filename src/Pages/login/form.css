@@ -14,7 +14,7 @@
 }
 
 .form-wrapper >  .form-container > h2{
-    font-size: 25px;
+    font-size: clamp(1.0625rem, 0.4375rem + 2vw, 1.5625rem);
     font-weight: 300;
     margin-bottom: 30px;
 }
@@ -36,14 +36,14 @@
 }
 
 .form-wrapper > .form-container > form  > div > input{
-    font-size: 18px;
-    padding: 7px 10px;
+    font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
+    padding: 7px 0.5em;
 }
 
 .form-wrapper > .form-container > form > button{
     width: 100%;
-    font-size: 18px;
-    padding: 7px 10px;
+    font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
+    padding: 7px 0.5em;
     background: var(--color);
     border-radius: var(--borderRadius);
     color: var(--background);
