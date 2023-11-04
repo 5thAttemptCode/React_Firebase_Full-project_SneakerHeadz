@@ -20,9 +20,12 @@ import Women from './Pages/women/Women'
 import Footer from './Components/footer/index'
 import Nav from './Components/nav/index'
 import ProductPage from './Components/productPage/index'
+import useViewportheight from './Utils/useViewPortheight'
 
 
 export default function App() {
+  
+  useViewportheight()
   
   return (
     <ShopContextProvider>
