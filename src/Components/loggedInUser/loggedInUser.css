@@ -1,6 +1,7 @@
 .logged-in-user{
     position: fixed;
     top: 15vh;
+    top: calc(var(--vh, 1vh) * 15);
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -20,5 +21,6 @@
 @media(max-width: 550px){
     .logged-in-user{
         top: 17vh;
+        top: calc(var(--vh, 1vh) * 17);
     }
 }

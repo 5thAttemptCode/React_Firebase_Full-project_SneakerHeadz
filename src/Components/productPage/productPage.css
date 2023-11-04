@@ -1,7 +1,9 @@
 .product-page{
     position: relative;
     margin-top: 22vh;
+    margin-top: calc(var(--vh, 1vh) * 22);
     padding-bottom: 7vh;
+    padding-bottom: calc(var(--vh, 1vh) * 7);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -80,5 +82,12 @@
 
     .product-page > .product-page-container{
         width: 100%;
+    }
+ }
+
+ 
+ @media(max-width: 450px){
+    .product-page > .detail-container{
+        padding-inline: 20px;
     }
  }

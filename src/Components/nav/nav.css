@@ -3,6 +3,7 @@ nav{
   top: 0;
   width: 100%;
   height: 15vh;
+  height: calc(var(--vh, 1vh) * 15);
   display: flex;
   justify-content: space-between;
   align-items: center;

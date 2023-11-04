@@ -1,5 +1,6 @@
 .subscribe{
     height: 50vh;
+    height: calc(var(--vh, 1vh) * 50);
     width: 100%;
     background: var(--color);
     color: white;

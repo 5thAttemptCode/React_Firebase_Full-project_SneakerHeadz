@@ -41,4 +41,4 @@ const PayPalButton = (props) => {
   )
 }
 
-export default PayPalButton;
+export default PayPalButton
