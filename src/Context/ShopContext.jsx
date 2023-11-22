@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from 'react'
+import { createContext, useState, useEffect, useMemo } from 'react'
 import useSneaker from '../Utils/useSneaker'
 
 
@@ -8,15 +8,19 @@ export const ShopContextProvider = (props) => {
     const [ cartItems, setCartItems ] = useState({})
     const { sneaker, isLoading } = useSneaker()
 
+    const defaultCart = useMemo(() => {
+        let defaultCart = {}
+        sneaker.forEach((item) => {
+            defaultCart[item.id] = 0
+        })
+        return defaultCart
+    }, [sneaker]) 
+
     useEffect(() => {
         if (!isLoading) {
-            let defaultCart = {}
-            sneaker.forEach((item) => {
-                defaultCart[item.id] = 0
-            })
             setCartItems(defaultCart)
         }
-    }, [sneaker, isLoading])
+    }, [sneaker, isLoading, defaultCart])
 
     //___________________________________________
     const getTotalCartAmount = () => {
