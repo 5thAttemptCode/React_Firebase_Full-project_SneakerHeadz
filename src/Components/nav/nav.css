@@ -27,15 +27,28 @@ nav > .logo a{
 }
 
 nav > .list{
-  width: 25vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1em
 }
 
 nav > .list a{
   font-weight: 600;
   font-size: clamp(1.125rem, 0.9688rem + 0.5vw, 1.25rem);
+  background: var(--backgroundTwo);
+  padding: 0.5em 1.2em;
+  border-radius: var(--borderRadius);
+}
+
+nav > .list a.active span{
+  rotate: 10px
+}
+
+nav > .list a:hover,
+nav > .list a.active{
+  background: var(--color);
+  color: var(--background);
 }
 
 nav > .user{
@@ -59,22 +72,19 @@ nav > .user{
 }
 
 /*________________________________________________*/
-@media(max-width: 990px){
-  nav > .list {
-    width: 40vw
-  }
-}
-
-@media(max-width: 550px){
+@media(max-width: 768px){
   nav > .list {
     position: absolute;
-    bottom: -2vh;
+    bottom: -10%;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
     background: var(--background);
+  }
+
+  nav > .list a{
+    padding: 0.4em 0.9em;
   }
 }

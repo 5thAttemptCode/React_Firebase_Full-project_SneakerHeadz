@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import './nav.css'
 
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { ShopContext } from '../../Context/ShopContext'
 import { ShoppingBag, UserCircle } from '@phosphor-icons/react'
 
@@ -20,9 +20,9 @@ export default function Nav() {
             <Link to="/">SNEAKER <br /> HEADZ</Link>
         </div>
         <div className="list">
-            <Link className="nav-btn" to="/shop">SHOP</Link>
-            <Link className="nav-btn" to="/women">WOMEN</Link>
-            <Link className="nav-btn" to="/men">MEN</Link>
+            <NavLink className="nav-btn" to="/shop">SHOP ⭢</NavLink>
+            <NavLink className="nav-btn" to="/women">WOMEN ⭢</NavLink>
+            <NavLink className="nav-btn" to="/men">MEN ⭢</NavLink>
         </div>
         <div className="user">
             <Link to="/cart">
