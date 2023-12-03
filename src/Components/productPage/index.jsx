@@ -14,22 +14,27 @@ export default function ProductPage() {
   let navigate = useNavigate()
   
   //Get the data for each sneaker
-  const location = useLocation();
-  const data = location.state.data;
+  const location = useLocation()
+  const data = location.state.data
   const { id, name, description, type, price, image } = data
 
   //context
   const { addToCart } = useContext(ShopContext)
 
   //Add-To-Cart-button text
-  const [ buttonText, setButtonText ] = useState("Add to Cart")
   const handleAddToCart = () => {
     addToCart(id)
-    setButtonText("Thank you!")
+  }
 
-    setTimeout(() => {
-      setButtonText("Add to Cart")
-    }, 2000)
+  //disable button
+  const [ sizeSelected, setSizeSelected ] = useState(false)
+
+  const handleSizeSelect = (event) => {
+    if (event.target.value) {
+      setSizeSelected(true)
+    } else {
+      setSizeSelected(false)
+    }
   }
 
   return (
@@ -45,9 +50,9 @@ export default function ProductPage() {
           <p>{description}</p>
           <div>
             <button className='back' onClick={() => navigate(-1)}>← Continue shopping</button>
-            {data.type === 'female' ? <FemaleSize /> : <MaleSize />}
+            {data.type === 'female' ? <FemaleSize onSizeSelect={handleSizeSelect} /> : <MaleSize onSizeSelect={handleSizeSelect} />}
           </div>
-          <button className='button' onClick={handleAddToCart}>{buttonText}</button>
+          <button className={`button ${!sizeSelected ? 'not-allowed' : ''}`} disabled={!sizeSelected} onClick={handleAddToCart}>Add to Cart</button>
         </div>
       </div>
     </div>

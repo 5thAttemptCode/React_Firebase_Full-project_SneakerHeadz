@@ -61,9 +61,14 @@
     border-radius: var(--borderRadius);
  }
 
- .product-page > .detail-container .details .btn-box .buy-now:hover{
+.product-page > .detail-container .details .btn-box .buy-now:hover{
     background: rgb(0, 0, 0, 0.6);
- }
+}
+
+.not-allowed {
+    cursor: not-allowed;
+}
+
 
 
  /*________________________________________________*/
