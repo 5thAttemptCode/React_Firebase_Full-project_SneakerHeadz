@@ -1,0 +1,22 @@
+.search-bar{
+    border: 2px solid black;
+    background: var(--background);
+    border-radius: var(--borderRadius);
+    overflow: hidden;
+    display: flex;
+    justify-self: end;
+    max-width: 270px;
+}
+.search-bar > input{
+    border: none;
+    outline: none;
+    padding: 0.3em 1em;
+    font-size: 16px;
+}
+
+.search-bar > span{
+    padding-right: 0.5em;
+    margin-top: 0.3em;
+    align-self: center;
+}
+

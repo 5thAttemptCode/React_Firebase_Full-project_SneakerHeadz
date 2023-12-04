@@ -1,0 +1,9 @@
+footer{
+    background: var(--greyOne);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--gap-size);
+    padding: clamp(1.25rem, -1.0938rem + 7.5vw, 3.125rem);
+    font-size: 12px;
+}

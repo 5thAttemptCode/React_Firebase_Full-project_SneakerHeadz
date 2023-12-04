@@ -1,5 +1,5 @@
 import React from 'react'
-import './sliderText.css'
+import './style.css'
 
 
 export default function SliderText(props) {

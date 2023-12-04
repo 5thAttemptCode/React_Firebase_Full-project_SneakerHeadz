@@ -6,7 +6,14 @@ export const ShopContext = createContext(null)
 
 export const ShopContextProvider = (props) => {
     const [ cartItems, setCartItems ] = useState({})
+    const [searchTerm, setSearchTerm] = useState('')
+
+
     const { sneaker, isLoading } = useSneaker()
+
+    const filteredSneakers = searchTerm 
+    ? sneaker.filter((shoe) => shoe.name && shoe.name.toLowerCase().startsWith(searchTerm.toLowerCase()))
+    : sneaker
 
     const defaultCart = useMemo(() => {
         let defaultCart = {}
@@ -16,11 +23,11 @@ export const ShopContextProvider = (props) => {
         return defaultCart
     }, [sneaker]) 
 
-    useEffect(() => {
+      useEffect(() => {
         if (!isLoading) {
-            setCartItems(defaultCart)
+          setCartItems(defaultCart)
         }
-    }, [sneaker, isLoading, defaultCart])
+      }, [filteredSneakers, sneaker, isLoading, defaultCart])
 
     //___________________________________________
     const getTotalCartAmount = () => {
@@ -57,6 +64,7 @@ export const ShopContextProvider = (props) => {
     const checkout = () => {
         setCartItems(getDefaulCart())
     }
+
     
     //___________________________________________
     const contextValue = {
@@ -65,7 +73,9 @@ export const ShopContextProvider = (props) => {
         removeFromCart,
         updateCartItemCount,
         getTotalCartAmount,
-        checkout
+        checkout,
+        searchTerm,
+        setSearchTerm
     }
 
     return (

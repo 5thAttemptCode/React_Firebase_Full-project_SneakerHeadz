@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
-import './nav.css'
-
+import './style.css'
 import { Link, NavLink } from 'react-router-dom'
 import { ShopContext } from '../../Context/ShopContext'
 import { ShoppingBag, UserCircle } from '@phosphor-icons/react'
@@ -15,16 +14,17 @@ export default function Nav() {
   //and reduce((a, b) => a + b, 0) is used to sum these quantities to give a total count.
 
   return (
-    <nav>
-        <div className="logo">
+    <header>
+      <nav>
+        <div className="logo grid-item">
             <Link to="/">SNEAKER <br /> HEADZ</Link>
         </div>
-        <div className="list">
-            <NavLink className="nav-btn" to="/shop">SHOP ⭢</NavLink>
-            <NavLink className="nav-btn" to="/women">WOMEN ⭢</NavLink>
-            <NavLink className="nav-btn" to="/men">MEN ⭢</NavLink>
+        <div className="list grid-item">
+            <NavLink className="nav-btn" to="/shop">SHOP</NavLink>
+            <NavLink className="nav-btn" to="/women">WOMEN</NavLink>
+            <NavLink className="nav-btn" to="/men">MEN</NavLink>
         </div>
-        <div className="user">
+        <div className="user grid-item">
             <Link to="/cart">
               <ShoppingBag size={30} />
               {cartItemCount > 0 && 
@@ -37,6 +37,7 @@ export default function Nav() {
               <UserCircle size={30} />
             </Link>
         </div>
-    </nav>
+      </nav>
+    </header>
   )
 }

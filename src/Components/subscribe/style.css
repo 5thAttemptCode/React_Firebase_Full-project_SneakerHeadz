@@ -1,0 +1,66 @@
+:root{
+    --subscribeColorOne: #323232;
+    --subscribeColorTwo: #232323;
+}
+
+.subscribe{
+    height: 50vh;
+    height: calc(var(--vh, 1vh) * 50);
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color);
+    background-image: linear-gradient(30deg, var(--subscribeColorOne) 12%, transparent 12.5%, transparent 87%, var(--subscribeColorOne) 87.5%, var(--subscribeColorOne)),
+                      linear-gradient(150deg, var(--subscribeColorOne) 12%, transparent 12.5%, transparent 87%, var(--subscribeColorOne) 87.5%, var(--subscribeColorOne)),
+                      linear-gradient(30deg, var(--subscribeColorOne) 12%, transparent 12.5%, transparent 87%, var(--subscribeColorOne) 87.5%, var(--subscribeColorOne)),
+                      linear-gradient(150deg, var(--subscribeColorOne) 12%, transparent 12.5%, transparent 87%, var(--subscribeColorOne) 87.5%, var(--subscribeColorOne)),
+                      linear-gradient(60deg, var(--subscribeColorTwo) 25%, transparent 25.5%, transparent 75%, var(--subscribeColorTwo) 75%, var(--subscribeColorTwo)),
+                      linear-gradient(60deg, var(--subscribeColorTwo) 25%, transparent 25.5%, transparent 75%, var(--subscribeColorTwo) 75%, var(--subscribeColorTwo));
+    background-size: var(--product-width) var(--product-height);
+    background-position: 0 0, 0 0, calc(var(--product-width) / 2) calc(var(--product-height) / 2), calc(var(--product-width) / 2) calc(var(--product-height) / 2), 0 0, calc(var(--product-width) / 2) calc(var(--product-height) / 2);
+}
+
+.subscribe > .subscribe-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.subscribe > .subscribe-wrapper > div > h3{
+    font-size: clamp(1.375rem, 0.9063rem + 1.5vw, 1.75rem);
+    font-weight: 400;
+}
+
+.subscribe > .subscribe-wrapper > div:nth-child(2){
+    display: flex;
+    margin-top: 20px;
+}
+
+.subscribe > .subscribe-wrapper > div > input{
+    width: clamp(12.5rem, 4.6875rem + 25vw, 18.75rem);
+    padding: 5px;
+    font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
+    outline: none;
+    border: none;
+}
+
+.subscribe > .subscribe-wrapper > div > button{
+    padding: 5px 15px;
+    font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
+    outline: none;
+    border: none;
+}
+
+.subscribe > .subscribe-wrapper > div > button:hover{
+    cursor: pointer;
+}
+
+
+/*________________________________________________*/
+@media(max-width: 450px){
+    .subscribe-wrapper > div{
+        width: 320px
+    }
+}

@@ -1,22 +1,18 @@
 import React from 'react'
-
 import { AuthContextProvider } from './Context/AuthContext'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { ShopContextProvider } from './Context/ShopContext'
-
 import ProtectedRoute from './Utils/ProtectedRoute'
 import ScrollToTop from './Utils/ScrollToTop'
-
-import Account from './Pages/account/Account'
-import Cart from './Pages/cart/Cart'
-import Home from './Pages/home/Home'
+import Account from './Pages/account/index'
+import Cart from './Pages/cart/index'
+import Home from './Pages/home/index'
 import LoggedInUser from './Components/loggedInUser/index'
 import Login from './Pages/login/Login'
-import Men from './Pages/men/Men'
-import Shop from './Pages/shop/Shop'
+import Men from './Pages/men/index'
+import Shop from './Pages/shop/index'
 import SignUp from './Pages/login/SignUp'
-import Women from './Pages/women/Women'
-
+import Women from './Pages/women/index'
 import Footer from './Components/footer/index'
 import Nav from './Components/nav/index'
 import ProductPage from './Components/productPage/index'

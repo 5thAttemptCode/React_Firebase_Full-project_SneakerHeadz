@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-import './form.css'
-
+import './style.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../../Context/AuthContext'
-
 import Login from './Login'
 
 
@@ -26,7 +24,7 @@ export default function SignUp() {
       setError(e.message);
       console.log(e.message);
     }
-  };
+  }
 
   return (
     <div className='form-wrapper'>

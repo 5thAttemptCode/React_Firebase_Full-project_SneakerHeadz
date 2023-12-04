@@ -1,9 +1,7 @@
 import React from 'react'
-import './slider.css'
-
+import './style.css'
 import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
-
 import Button from '../button/index'
 import SliderText from '../sliderText'
 

@@ -16,7 +16,7 @@ const PayPalButton = (props) => {
                 value: totalAmount
               }
             }]
-          });
+          })
         },
         onApprove: (data, actions) => {
           return actions.order.capture().then((details) => {
@@ -31,7 +31,7 @@ const PayPalButton = (props) => {
         ReactDOM.unmountComponentAtNode(paypalRef.current);
         paypalRef.current.innerHTML = '';
       } 
-    };
+    }
   }, [totalAmount]) 
 
   return (

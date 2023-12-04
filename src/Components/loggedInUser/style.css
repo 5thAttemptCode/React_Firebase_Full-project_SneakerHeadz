@@ -1,0 +1,26 @@
+.logged-in-user{
+    position: fixed;
+    top: 15vh;
+    top: calc(var(--vh, 1vh) * 15);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: rgb(236, 235, 235);
+    z-index: 10;
+}
+
+.logged-in-user > p{
+    font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
+    color: rgb(0, 0, 0, 0.6);
+    padding: 1vh 5vw;
+}
+
+
+/*________________________________________________*/
+@media(max-width: 768px){
+    .logged-in-user{
+        top: 16vh;
+        top: calc(var(--vh, 1vh) * 16);
+    }
+}

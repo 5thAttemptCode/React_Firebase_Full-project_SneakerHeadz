@@ -1,0 +1,10 @@
+.skew-details{
+  transform: skewY(-30deg);
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(0.1875rem, -0.3594rem + 1.75vw, 0.625rem);
+  margin-top: 20px;
+}

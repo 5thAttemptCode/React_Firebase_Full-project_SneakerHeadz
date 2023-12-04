@@ -1,0 +1,30 @@
+.collage-container{
+  position: relative;
+}
+  
+.collage-container > img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  border-radius: var(--borderRadius);
+  scale: 1;
+}
+  
+.collage-container > p{
+  font-size: clamp(2.5rem, -0.625rem + 10vw, 5rem);
+  -webkit-text-fill-color: rgb(0, 255, 251);
+  -webkit-text-stroke: 1px solid rgb(62, 1, 81);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(62, 1, 81);
+  margin: clamp(0.625rem, -0.9375rem + 5vw, 1.875rem);
+  font-family: var(--graffiti);
+}
+  
+.collage-container > a{
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}

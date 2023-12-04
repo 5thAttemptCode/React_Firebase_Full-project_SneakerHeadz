@@ -33,10 +33,16 @@ button{
   cursor: pointer;
 }
 
+a{
+  color: var(--color);
+}
+
 .section{
   width: 100%;
   margin-top: 17vh;
+  margin-top: calc(var(--vh, 1vh) * 17);
   padding: 7vh 0;
+  padding: calc(var(--vh, 1vh) * 7) 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,6 +55,7 @@ button{
 
 .container{
   height: 80vh;
+  height: calc(var(--vh, 1vh) * 80);
   width: calc(100% - clamp(1.25rem, -5rem + 20vw, 6.25rem));
   border-radius: var(--borderRadius);
   border: 2px solid var(--color);
@@ -75,6 +82,15 @@ button{
 .button:hover{
   background: rgb(0, 0, 0, 0.6);
 }
+
+.section-intro-search{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: end;
+  justify-content: space-between;
+  width: 85%;
+}
+
 
 /*________________________________________________*/
 @media(max-width: 1300px){
@@ -105,14 +121,21 @@ button{
   :root{
     --product-width: clamp(15.625rem, 11.7188rem + 12.5vw, 18.75rem);
   }
+  
 }
 
 @media(max-width: 500px){
   :root{
     --product-width: 350px
   }
+  
   .p-na-pr{
     font-size: 20px;
+  }
+
+  .section-intro-search{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
   }
 }
 

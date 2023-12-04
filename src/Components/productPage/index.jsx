@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-import './productPage.css'
-
+import './style.css'
 import { ShopContext } from '../../Context/ShopContext'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useContext } from 'react'
-
 import FemaleSize from '../sizeSelect/FemaleSize'
 import MaleSize from '../sizeSelect/MaleSize'
 

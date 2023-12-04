@@ -1,0 +1,40 @@
+.account{
+    height: 85vh;
+    height: calc(var(--vh, 1vh) * 85);
+    margin-top: 15vh;
+    margin-top: calc(var(--vh, 1vh) * 15);
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.account > .account-wrapper{
+    padding-top: 15vh;
+    padding-top: calc(var(--vh, 1vh) * 15);
+    display: flex;
+    flex-direction: column;
+    padding-inline: 10px;
+}
+
+.account > .account-wrapper > p{
+    font-size: 30px;
+}
+
+.account > .account-wrapper > p > span{
+    opacity: 0.4;
+}
+
+.account > .account-wrapper > button{
+    font-size: 20px;
+    padding: 0.5rem 2.5rem;
+    border-radius: var(--borderRadius);
+    outline: none;
+    border: none;
+    background: var(--color);
+    color: var(--background);
+    cursor: pointer;
+    margin-top: 50px;
+}

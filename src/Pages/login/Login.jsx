@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-import './form.css'
-
+import './style.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../../Context/AuthContext'
-
 import SignUp from './SignUp'
 
 
@@ -64,15 +62,15 @@ export default function Login() {
               value={email}
               type="text" 
               placeholder='email' />
-            </div>
-            <div role="group">
-              <label>Enter your password</label>
-              <input 
-                onChange={(e) => setPassword(e.target.value)} 
-                value={password}
-                type="password" 
-                placeholder='password' />
-            </div>
+          </div>
+          <div role="group">
+            <label>Enter your password</label>
+            <input 
+              onChange={(e) => setPassword(e.target.value)} 
+              value={password}
+              type="password" 
+              placeholder='password' />
+          </div>
           <button>Submit</button>
         </form>
         <p>Don't have an account yet? Click &nbsp;<Link className='underline' to="/signup" element={<SignUp />}>here</Link></p>

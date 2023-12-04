@@ -1,6 +1,5 @@
 import React from "react"
-import './productBox.css'
-
+import './style.css'
 import SkewDetails from "../skewDetails"
 import Details from "../details/index"
 
@@ -13,6 +12,6 @@ export default function ProductBox({ data }) {
       <Details data={data}/>
       <img src={data.image} />
     </div>
-  );
-};
+  )
+}
 

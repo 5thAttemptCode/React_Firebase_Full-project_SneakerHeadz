@@ -1,6 +1,5 @@
 import React from 'react'
-import './loggedInUser.css'
-
+import './style.css'
 import { UserAuth } from '../../Context/AuthContext'
 
 

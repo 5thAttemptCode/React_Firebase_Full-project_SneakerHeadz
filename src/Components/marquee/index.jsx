@@ -1,6 +1,5 @@
 import React from 'react'
-import './marquee.css'
-
+import './style.css'
 import Marquee from 'react-fast-marquee'
 
 
