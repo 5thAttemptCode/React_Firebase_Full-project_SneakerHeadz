@@ -1,7 +1,20 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import dotenv from 'dotenv'
 
-// https://vitejs.dev/config/
+
+// Load the environment variables
+dotenv.config()
+
 export default defineConfig({
-  plugins: [react()],
+ plugins: [react()],
+ define: {
+    'process.env': process.env,
+ },
+ server: {
+   port: 5173,
+   strictPort: true,
+   host: true,
+   origin: "http://0.0.0.0:5173",
+ }
 })
